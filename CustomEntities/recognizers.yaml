@@ -1,0 +1,27 @@
+recognizers:
+  -
+    name: "Zip code Recognizer"
+    supported_language: "en"
+    patterns:
+      -
+         name: "zip code (weak)"
+         regex: "[A-Za-z]\\d[A-Za-z][ -]?\\d[A-Za-z]\\d"
+         score: 0.01
+    context:
+     - zip
+     - code
+    supported_entity: "ZIP"
+  -
+    name: "Titles recognizer"
+    supported_language: "en"
+    supported_entity: "TITLE"
+    deny_list:
+      - Sir
+      - Ma''am
+      - Madam
+      - Mr.
+      - Mrs.
+      - Ms.
+      - Miss
+      - Dr.
+      - Prof.
